@@ -1,0 +1,12 @@
+@import '../../assets/styles/variables.scss';
+
+.imageWrapper {
+    width: 100%;
+    @include sectionPadding;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

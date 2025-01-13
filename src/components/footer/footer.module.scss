@@ -1,0 +1,68 @@
+@import '../../assets/styles/variables.scss';
+
+.footer {
+    background: $main-cyan;
+    @include sectionPadding;
+}
+
+.footerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerWpapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    span {
+        display: block;
+        margin-top: 10px;
+        color: $main-white ;
+        font-family: 'Inter';
+        @include fsz14;
+    }
+}
+
+.footerCopy {
+    max-width: 100%;
+    transition: opacity .8s ease-in-out;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    color: $accent-cyan;
+    text-align: center;
+    flex-grow: 1;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    a {
+        background: linear-gradient(90deg, #f4f6f6, #8997f3, #ebecd9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        padding-left: 2px;
+    }
+}
+
+.footerLogo {
+    @include logoSize;
+}
+
+
+.footerLink {
+    color: $main-white ;
+    font-family: 'Inter';
+    @include fsz14;
+}
+
+@media (max-width: 475px) {
+    .footerCopy {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,93 @@
+@import '../../assets/styles/variables.scss';
+
+
+.whyUs {
+    @include sectionPadding;
+}
+
+.whyUsTitle {
+    color: $main-dark;
+    margin-bottom: 70px;
+    @include sectionTitle;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.cardsWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    gap: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    background: $main-white;
+    padding: 20px 20px 46px 20px;
+    width: calc(33% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+}
+
+
+.cardIcon {
+    @include cardIcon;
+
+    & {
+        margin-bottom: 12px;
+    }
+}
+
+.cardTitle {
+    margin-top: auto;
+    color: $main-dark;
+    @include fsz18;
+}
+
+.leftBtn {
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        transform: translateX(-5px);
+    }
+}
+
+.rightBtn {
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        transform: translateX(5px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .whyUsTitle {
+        margin-bottom: 40px;
+    }
+
+    .card {
+        padding: 15px 15px 26px 15px;
+        width: calc(50% - 30px);
+        min-height: 240px;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .card {
+        padding: 20px 20px 46px 20px;
+
+        width: calc(100% - 30px);
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 475px) {}

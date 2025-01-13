@@ -64,8 +64,9 @@ const LoginForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (loginfield && password) {
+            console.log('ENT=');
             dispatch(login({ login: loginfield, password: password }))
-
+            console.log('ENT1=');
         }
     }
 
